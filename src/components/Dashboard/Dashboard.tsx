@@ -26,7 +26,7 @@ interface Service {
 }
 
 interface Assessment {
-  id: string;
+  _id: string;
   inquiryId: string;
   fullName: string;
   phone?: string;
@@ -233,7 +233,7 @@ export default function Dashboard() {
               </thead>
               <tbody>
                 {assessments.map((a) => (
-                  <tr key={a.id} className="border border-[#0F3D68]">
+                  <tr key={a._id} className="border border-[#0F3D68]">
                     <td className="px-4 py-2 border border-[#0F3D68]">
                       {a.inquiryId}
                     </td>
