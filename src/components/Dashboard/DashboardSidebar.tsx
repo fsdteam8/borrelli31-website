@@ -45,7 +45,7 @@ export default function DashboardSidebar() {
   const handleLogout = async () => {
     setOpenLogoutDialog(false);
 
-    await signOut({ redirect: false });
+    await signOut({ callbackUrl: "/" });
     toast.success("You have successfully logged out.");
 
     setTimeout(() => {
@@ -150,7 +150,11 @@ export default function DashboardSidebar() {
             >
               Cancel
             </Button>
-            <Button variant="destructive" onClick={handleLogout} className="cursor-pointer">
+            <Button
+              variant="destructive"
+              onClick={handleLogout}
+              className="cursor-pointer"
+            >
               Logout
             </Button>
           </DialogFooter>
